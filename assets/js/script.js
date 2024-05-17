@@ -43,7 +43,8 @@ window.addEventListener("scroll", function () {
 // myFunctions 
 const subscribeMail = document.querySelector('input[type="email"]');
 const subscribeBtn = document.querySelector("button[type='submit'] span");
-subscribeBtn.addEventListener('click', () => {
+subscribeBtn.addEventListener('click', (eve) => {
+  eve.preventDefault();
   let mail = subscribeMail.value
   if (/^-?\d*\.?\d+$/.test(mail)) {
     alert("Invalid Input!");
