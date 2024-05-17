@@ -60,6 +60,7 @@ const offeredServicesClicked = () => {
   const offeredService1 = document.querySelectorAll('.service-list-1 li h3');
 offeredService1.forEach(singleList => {
   singleList.addEventListener('click', (eve) => {
+    eve.preventDefault();
     let val = eve.target.innerText;
     alert("You have selected: " + val);
   })
@@ -67,6 +68,7 @@ offeredService1.forEach(singleList => {
 const offeredService2 = document.querySelectorAll('.service-list-2 li h3');
 offeredService2.forEach(singleList => {
   singleList.addEventListener('click', (eve) => {
+    eve.preventDefault();
     let val = eve.target.innerText;
     alert("You have selected: " + val);
   })
