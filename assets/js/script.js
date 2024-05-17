@@ -1,4 +1,3 @@
-'use strict';
 
 /**
  * navbar toggle
@@ -41,3 +40,37 @@ window.addEventListener("scroll", function () {
   }
 
 });
+// myFunctions 
+const subscribeMail = document.querySelector('input[type="email"]');
+const subscribeBtn = document.querySelector("button[type='submit'] span");
+subscribeBtn.addEventListener('click', () => {
+  let mail = subscribeMail.value
+  if (/^-?\d*\.?\d+$/.test(mail)) {
+    alert("Invalid Input!");
+    console.log(new Error("Input Must be email type!"));
+  } else {
+    alert(
+      JSON.stringify("Your mail: " + mail)
+    )
+    console.log("E-mail: " + mail);
+  }
+
+})
+const offeredServicesClicked = () => {
+  const offeredService1 = document.querySelectorAll('.service-list-1 li h3');
+offeredService1.forEach(singleList => {
+  singleList.addEventListener('click', (eve) => {
+    let val = eve.target.innerText;
+    alert("You have selected: " + val);
+  })
+})
+const offeredService2 = document.querySelectorAll('.service-list-2 li h3');
+offeredService2.forEach(singleList => {
+  singleList.addEventListener('click', (eve) => {
+    let val = eve.target.innerText;
+    alert("You have selected: " + val);
+  })
+})
+
+};
+offeredServicesClicked();
